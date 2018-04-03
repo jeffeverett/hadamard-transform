@@ -1,0 +1,4 @@
+*.mex*
+*.o
+profiler.m
+profiler.m~
