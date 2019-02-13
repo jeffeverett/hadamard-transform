@@ -35,7 +35,9 @@
 /* Using OpenMP with MEX script requires special compile flags.
   Use `mex hadamard_openmp.c CFLAGS="\$CFLAGS -fopenmp" LDFLAGS="\$LDFLAGS -fopenmp"` for GCC-based mex
   and `mex hadamard_openmp.c COMPFLAGS="/openmp"` for MSVC-based mex*/
+#if defined(_OPENMP)
 #include <omp.h>
+#endif
 
 
 /* SRB: Feb 27 2014, gcc-4.8 has problems with char16_t not being defined. 
